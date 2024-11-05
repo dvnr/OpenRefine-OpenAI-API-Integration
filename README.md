@@ -22,7 +22,7 @@ This repository contains a Python script that integrates with the OpenAI API to 
 1. Clone this repository:
 
     ```bash
-    git clone https://github.com/your-username/openrefine-api-integration.git
+    git clone https://github.com/dvnr/openrefine-api-integration.git
     cd openrefine-api-integration
     ```
 2. Create the required configuration files:
