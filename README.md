@@ -1,5 +1,5 @@
 
-# OpenRefine API Integration Script
+# OpenRefine OpenAI API Integration
 
 This repository contains a Python script that integrates with the OpenAI API to process data from OpenRefine. The script reads a cell value, builds a prompt, and sends a request to the OpenAI API based on configuration settings provided in a JSON file. The response, containing processed arguments, is returned diectly to OpenRefine in the new added column. 
 
