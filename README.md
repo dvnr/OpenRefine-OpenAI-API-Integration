@@ -25,14 +25,7 @@ This repository contains a Python script that integrates with the OpenAI API to 
     git clone https://github.com/your-username/openrefine-api-integration.git
     cd openrefine-api-integration
     ```
-
-2. Install any necessary dependencies:
-
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-3. Create the required configuration files:
+2. Create the required configuration files:
 
     - `config.json`: Contains API and model configurations.
     - `system_prompt.txt`: Contains the custom system prompt text.
@@ -47,6 +40,34 @@ This repository contains a Python script that integrates with the OpenAI API to 
       "temperature": 0,
       "endpoint": "https://api.openai.com/v1/chat/completions",
       "api_key": "your_openai_api_key"
+    }
+    ```
+
+    Example `tools.json`:
+
+    ```json
+    {
+        "type": "function",
+        "function": {
+            "name": "format_dates",
+            "description": "Return formatted dates in JSON format with 'start' and 'end' following ISO 8601 format.",
+            "parameters": {
+                "type": "object",
+                "required": ["start", "end"],
+                "properties": {
+                    "start": {
+                        "type": "string",
+                        "description": "The start date in ISO 8601 format."
+                    },
+                    "end": {
+                        "type": "string",
+                        "description": "The end date in ISO 8601 format."
+                    }
+                },
+                "additionalProperties": false
+            },
+            "strict": true
+        }
     }
     ```
 
