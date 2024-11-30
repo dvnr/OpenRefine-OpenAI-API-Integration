@@ -84,7 +84,9 @@ To use this script within OpenRefine, you can execute it by calling a subprocess
 ```python
 import subprocess
 
-return subprocess.check_output(["/path/to/python", "/path/to/main.py", value.encode("utf-8")])
+output = subprocess.check_output(["/Users/admin/opt/anaconda3/bin/python", "/Users/admin/Dropbox/% code/OpenRefine-OpenAI-API-Integration/main.py", value.encode("utf-8")])
+
+return output.decode("utf-8")
 ```
 
 - Adjust "/path/to/python" to the location of your Python executor and "/path/to/main.py" to the path of the main script (main.py).
